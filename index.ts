@@ -19,9 +19,9 @@ app.post('/webhook', (req, res) => {
 
     if (intent === 'Dynamic Order Status Intent') {
         const orderId = parameters['order-id'];
-        if (orderId === 13) {
+        if (orderId == 13) {
             responseText = `Your order ${orderId} has been delivered.`;
-        } else if (orderId === 14) {
+        } else if (orderId == 14) {
             responseText = `Your order ${orderId} is dispatched.`;
         } else {
             responseText = `Your order ${orderId} is being processed.`;
